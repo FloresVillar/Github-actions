@@ -1,9 +1,7 @@
 FROM python:3.12-slim
 
-# Env for predictable runtime
 ENV PYTHONDONTWRITEBYTECODE=1     PYTHONUNBUFFERED=1     PIP_NO_CACHE_DIR=1     SERVICE_NAME=python-microservice     PORT=8000
 
-# Non-root user
 RUN useradd -m appuser
 WORKDIR /app
 
