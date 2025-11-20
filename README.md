@@ -1,4 +1,4 @@
-# Laboratorio CI/CD DevSecOps (Local-first, sin secretos, sin Flask, sin act)
+# Laboratorio CI/CD DevSecOps con github-actions
 
 Este laboratorio entrega un pipeline completo de **DevSecOps** para un microservicio **Python** mínimo basado en `http.server`, con **Docker**, **Kubernetes (KinD)** y **GitHub Actions**. No usa `GITHUB_TOKEN` implícito, no requiere contraseñas ni secretos, y puede ejecutarse **100% local** con `Makefile`.
 
