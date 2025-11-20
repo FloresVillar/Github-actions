@@ -1,3 +1,4 @@
+# Docker Compose para levantar el microservicio python-microservice localmente con healthcheck en /health
 services:
   app:
     build:
