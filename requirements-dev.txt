@@ -1,3 +1,4 @@
+# Dependencias de desarrollo para análisis de seguridad, pruebas y utilidades HTTP (no se incluyen en producción)
 bandit==1.7.9
 semgrep==1.86.0
 pip-audit==2.7.3
