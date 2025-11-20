@@ -1,3 +1,4 @@
+# Entorno virtual, cachés de Python, evidencias, artefactos y configuración local (.env) que no deben versionarse
 .venv/
 __pycache__/
 *.pyc
