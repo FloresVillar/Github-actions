@@ -1,0 +1,14 @@
+{
+  "_type": "layout",
+  "steps": [
+    {
+      "name": "build",
+      "expected_materials": [],
+      "expected_products": [
+        {
+          "pattern": "artifacts/**"
+        }
+      ]
+    }
+  ]
+}

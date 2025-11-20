@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-microservice
+  template:
+    metadata:
+      labels:
+        app: python-microservice
+    spec:
+      containers:
+        - name: app
+          image: python-microservice:dev
+          imagePullPolicy: Never
+          env:
+            - name: SERVICE_NAME
+              value: python-microservice
+            - name: PORT
+              value: "8000"
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 2
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-microservice
+spec:
+  selector:
+    app: python-microservice
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP

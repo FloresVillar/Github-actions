@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.evidence/
+artifacts/
+.kind-cache/
+.env
