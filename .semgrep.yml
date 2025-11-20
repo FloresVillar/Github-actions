@@ -3,6 +3,6 @@ rules:
     pattern-either:
       - pattern: eval(...)
       - pattern: exec(...)
-    message: Avoid eval/exec
+    message: "Evitar eval/exec"
     severity: ERROR
     languages: [python]
