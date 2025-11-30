@@ -1,4 +1,6 @@
 ### Laboratorio CI/CD DevSecOps con github-actions
+FLORES VILAR----20151445F<br>
+
 
 Este repositorio entrega un pipeline completo de **DevSecOps** para un microservicio **Python** mínimo basado en `http.server`, con **Docker**, **Kubernetes (KinD)** y **GitHub Actions**. No usa `GITHUB_TOKEN` implícito, no requiere contraseñas ni secretos, y puede ejecutarse **100% local** con `Makefile`.
 
@@ -69,3 +71,18 @@ make evidence-pack   # tar.gz con artefactos y evidencias
 - Port-forward para smoke tests sin exponer NodePort.
 
 > Tip: Este repo puede integrarse a un **tablero Kanban** (Backlog -> Ready -> In Progress -> Code Review -> Testing -> Done) y capturar métricas (builds fallidos/exitosos, vulnerabilidades encontradas/mitigadas, etc.).
+
+#### Objetivos del laboratorio
+```bash
+empaquetado de imagenes 
+↓
+test (test/)
+↓
+SAST /SCA 
+↓
+generacion de SBOM
+↓escaneo de imagenes()
+↓
+levantar, DAST, checkHealth
+
+```
